@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script type="text/javascript">
+        function validform() {
+    var x = document.forms["formulaire"]["text"].value
+     if (x == null || x == "") {
+	        alert("Vous avez oublié d'insérer un message");
+	        return false;
+	    }
+	}
+    </script>
+</head>
+
+<body>
+   <?php echo"hello"; ?>
+    <a href=index.html>lien</a>
+    <form name="formulaire" onsubmit="return validform()">
+        <label for="nom">Nom &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="nom" placeholder="quel est votre nom" autofocus required><br><label for="mdp">MDP :</label><input type="password" name="mdp" maxlength="8" required><br>
+        <label for="email">Email :</label><input type=email name=email required><br><label for="tel">Téléphone  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="tel" placeholder="quel est votre telephone" focused required><br><label for="conserve">Conserver les données</label><input type=checkbox name="Conserve" value="Conserve"><br>
+        <label for="text">Message :</label><textarea name=text></textarea><br>
+        
+        <input type="submit"><input type="reset">
+    </form>
+</body>
+</html>
